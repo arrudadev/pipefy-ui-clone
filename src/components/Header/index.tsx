@@ -1,6 +1,14 @@
 import React from 'react';
-import { FaSortDown } from 'react-icons/fa';
-import { FiBell, FiMoreVertical, FiTrello, FiLayout } from 'react-icons/fi';
+import { FaSortDown, FaWrench } from 'react-icons/fa';
+import {
+  FiBell,
+  FiMoreVertical,
+  FiTrello,
+  FiLayout,
+  FiUsers,
+  FiFilter,
+  FiSettings,
+} from 'react-icons/fi';
 
 import {
   Container,
@@ -19,6 +27,9 @@ import {
   Tab,
   TabContent,
   Dropdown,
+  NavBottomActions,
+  ShareButton,
+  NavBottomActionItem,
 } from './styles';
 
 const Header: React.FC = () => {
@@ -68,6 +79,24 @@ const Header: React.FC = () => {
               </Dropdown>
             </Tab>
           </TabStrip>
+          <NavBottomActions>
+            <ShareButton>Compartilhar</ShareButton>
+            <NavBottomActionItem>
+              <FiUsers size={22} />
+            </NavBottomActionItem>
+            <NavBottomActionItem>
+              <FiLayout size={22} />
+            </NavBottomActionItem>
+            <NavBottomActionItem>
+              <FiFilter size={22} />
+            </NavBottomActionItem>
+            <NavBottomActionItem>
+              <FiSettings size={22} />
+            </NavBottomActionItem>
+            <NavBottomActionItem>
+              <FaWrench size={22} />
+            </NavBottomActionItem>
+          </NavBottomActions>
         </NavBottom>
       </PipeHeader>
     </Container>

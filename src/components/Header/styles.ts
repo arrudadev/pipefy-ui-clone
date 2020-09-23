@@ -232,3 +232,60 @@ export const Dropdown = styled.span`
     }
   }
 `;
+
+export const NavBottomActions = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const ShareButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 3px;
+  border: 0;
+
+  color: #fff;
+
+  font-weight: bold;
+
+  margin-right: 10px;
+  padding: 5px 10px 6px;
+
+  min-height: 30px;
+  max-height: 30px;
+
+  position: relative;
+  opacity: 1;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    cursor: pointer;
+  }
+`;
+
+export const NavBottomActionItem = styled.div`
+  color: #fff;
+
+  padding: 15px 3px 14px;
+  margin-right: 8px;
+
+  display: flex;
+  align-items: center;
+
+  > svg {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    > svg {
+      color: #fff;
+    }
+  }
+`;
