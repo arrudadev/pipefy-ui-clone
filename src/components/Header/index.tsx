@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiBell, FiMoreVertical } from 'react-icons/fi';
+import { FaSortDown } from 'react-icons/fa';
+import { FiBell, FiMoreVertical, FiTrello, FiLayout } from 'react-icons/fi';
 
 import {
   Container,
@@ -14,6 +15,10 @@ import {
   Notification,
   Avatar,
   Dots,
+  TabStrip,
+  Tab,
+  TabContent,
+  Dropdown,
 } from './styles';
 
 const Header: React.FC = () => {
@@ -43,8 +48,26 @@ const Header: React.FC = () => {
           </NavTopActions>
         </NavTop>
         <NavBottom>
-          <span>Visualizar em Kanban</span>
-          <span>Relatorios</span>
+          <TabStrip>
+            <Tab>
+              <TabContent className="active">
+                <FiTrello size={18} />
+                <span>Visualizar em Kanban</span>
+              </TabContent>
+              <Dropdown>
+                <FaSortDown size={18} />
+              </Dropdown>
+            </Tab>
+            <Tab>
+              <TabContent>
+                <FiLayout size={18} />
+                <span>Relatorios</span>
+              </TabContent>
+              <Dropdown>
+                <FaSortDown size={18} />
+              </Dropdown>
+            </Tab>
+          </TabStrip>
         </NavBottom>
       </PipeHeader>
     </Container>

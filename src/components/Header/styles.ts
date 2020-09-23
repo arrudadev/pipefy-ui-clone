@@ -163,4 +163,72 @@ export const Dots = styled.div`
   }
 `;
 
-export const NavBottom = styled.div``;
+export const NavBottom = styled.div`
+  width: 100%;
+  height: 50px;
+
+  overflow: auto;
+  overflow-y: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const TabStrip = styled.div`
+  display: flex;
+  align-items: center;
+
+  div + div {
+    margin-left: 10px;
+  }
+`;
+
+export const Tab = styled.div`
+  position: relative;
+
+  display: flex;
+  align-items: center;
+`;
+
+export const TabContent = styled.div`
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 15px 3px 14px;
+  margin-right: 5px;
+
+  opacity: 0.6;
+  border-bottom: 3px solid transparent;
+
+  &:hover,
+  &.active {
+    color: #fff;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    opacity: 1;
+
+    cursor: pointer;
+  }
+
+  > span {
+    font-weight: bold;
+
+    margin-left: 5px;
+  }
+`;
+
+export const Dropdown = styled.span`
+  > svg {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    > svg {
+      color: #fff;
+    }
+  }
+`;
