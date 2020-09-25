@@ -80,7 +80,7 @@ export const TrialUpate = styled.div`
 
   margin-left: 10px;
 
-  > a {
+  > span {
     color: #ffca78;
     font-weight: bold;
     margin-left: 3px;

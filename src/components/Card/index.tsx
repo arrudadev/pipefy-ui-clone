@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
-import { useDrag, useDrop } from 'react-dnd';
+import React, { useRef, useContext } from 'react';
+import { useDrag, useDrop, DragObjectWithType } from 'react-dnd';
 
 import { Container, Label } from './styles';
+
+import BoardContext from '../../context/BoardContext';
 
 interface CardProps {
   data: any;
@@ -9,8 +11,14 @@ interface CardProps {
   listIndex: any;
 }
 
+interface ItemDragged extends DragObjectWithType {
+  listIndex: number;
+  index: number;
+}
+
 const Card: React.FC<CardProps> = ({ data, index, listIndex }) => {
   const ref = useRef<any>();
+  const { move } = useContext(BoardContext);
 
   const [{ isDragging }, dragRef] = useDrag({
     item: { type: 'CARD', index, listIndex },
@@ -21,9 +29,10 @@ const Card: React.FC<CardProps> = ({ data, index, listIndex }) => {
 
   const [, dropRef] = useDrop({
     accept: 'CARD',
-    hover(item: any, monitor) {
+    hover(item: ItemDragged, monitor) {
       const draggedListIndex = item.listIndex;
       const targetListIndex = listIndex;
+
       const draggedIndex = item.index;
       const targetIndex = index;
 
@@ -36,10 +45,8 @@ const Card: React.FC<CardProps> = ({ data, index, listIndex }) => {
 
       const targetSize = ref.current.getBoundingClientRect();
       const targetCenter = (targetSize.bottom - targetSize.top) / 2;
-      const draggedOffset = monitor.getClientOffset();
 
-      // eslint-disable-next-line
-      // @ts-ignore
+      const draggedOffset = monitor.getClientOffset() as any;
       const draggedTop = draggedOffset.y - targetSize.top;
 
       if (draggedIndex < targetIndex && draggedTop < targetCenter) {
@@ -50,10 +57,9 @@ const Card: React.FC<CardProps> = ({ data, index, listIndex }) => {
         return;
       }
 
-      // move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
-      // eslint-disable-next-line
+      move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
+
       item.index = targetIndex;
-      // eslint-disable-next-line
       item.listIndex = targetListIndex;
     },
   });

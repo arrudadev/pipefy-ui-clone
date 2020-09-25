@@ -23,7 +23,7 @@ const List: React.FC<ListProps> = ({ data, index: listIndex }) => {
       </header>
 
       <ul>
-        {data.cards.map((card: any, index: any) => (
+        {data.cards.map((card, index) => (
           <Card key={card.id} listIndex={listIndex} index={index} data={card} />
         ))}
       </ul>

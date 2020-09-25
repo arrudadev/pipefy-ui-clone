@@ -43,7 +43,7 @@ const Header: React.FC = () => {
           <PipeTitle>
             <span>Chamados de TI</span>
             <TrialUpate>
-              - <a>Atualize agora</a>
+              - <span>Atualize agora</span>
             </TrialUpate>
           </PipeTitle>
           <NavTopActions>

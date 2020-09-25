@@ -71,5 +71,6 @@ module.exports = {
     'react/prop-types': 'off',
     'no-restricted-syntax': 'off',
     'react/no-array-index-key': 'off',
+    'no-param-reassign': 'off'
   },
 };
