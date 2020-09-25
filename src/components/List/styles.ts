@@ -25,10 +25,22 @@ export const Container = styled.div<Props>`
     height: 42px;
 
     h2 {
-      font-weight: 500;
-      font-size: 16px;
+      font-weight: 600;
+      font-size: 14px;
 
-      padding: 0 10px;
+      color: #213547;
+
+      line-height: 20px;
+      max-width: 210px;
+
+      display: inline-block;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      white-space: nowrap;
+
+      margin-bottom: 2px;
     }
 
     button {
@@ -41,10 +53,51 @@ export const Container = styled.div<Props>`
       background: #3b5bfd;
 
       cursor: pointer;
+
+      &:hover {
+        background: #243da3;
+      }
     }
   }
 
   ul {
     margin-top: 30px;
+  }
+`;
+
+export const HeaderInfo = styled.div`
+  max-width: 220px;
+`;
+
+export const HeaderActions = styled.div`
+  > svg circle {
+    color: #9aaabe;
+  }
+
+  > svg {
+    &:hover {
+      cursor: pointer;
+
+      > circle {
+        color: #3b5bfd;
+      }
+    }
+  }
+`;
+
+export const CardsCount = styled.div`
+  display: flex;
+  align-items: center;
+
+  > span {
+    color: #748396;
+
+    margin: 0 3px 0 0;
+
+    position: relative;
+
+    display: inline-flex;
+
+    font-size: 12px;
   }
 `;
