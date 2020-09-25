@@ -6,13 +6,18 @@ import GlobalStyles from './styles/global';
 
 import Board from './components/Board';
 import Header from './components/Header';
+import Main from './components/Main';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <GlobalStyles />
-      <Header />
-      <Board />
+      <Navigation />
+      <Main>
+        <Header />
+        <Board />
+      </Main>
     </DndProvider>
   );
 }

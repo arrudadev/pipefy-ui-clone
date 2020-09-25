@@ -5,8 +5,6 @@ import { ReactComponent as LogoWhite } from '../../assets/logo-white.svg';
 export const Container = styled.header`
   height: 90px;
 
-  padding: 0 30px;
-
   background: #3b5bfd;
   color: #fff;
 
