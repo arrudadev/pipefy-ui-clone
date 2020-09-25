@@ -13,6 +13,8 @@ export const Container = styled.div`
   min-height: 100vh;
 
   z-index: 10;
+
+  overflow-y: auto;
 `;
 
 export const Aside = styled.aside`

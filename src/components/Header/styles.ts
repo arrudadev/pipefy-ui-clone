@@ -19,6 +19,8 @@ export const Brand = styled.div`
   align-items: center;
   justify-content: center;
 
+  padding-left: 5px;
+
   &:hover {
     background: rgba(36, 61, 163, 0.3);
     cursor: pointer;
@@ -57,6 +59,10 @@ export const NavTop = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 430px) {
+    justify-content: flex-end;
+  }
 `;
 
 export const PipeTitle = styled.div`
@@ -68,6 +74,10 @@ export const PipeTitle = styled.div`
   color: #fff;
 
   display: flex;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export const TrialUpate = styled.div`
@@ -87,6 +97,10 @@ export const TrialUpate = styled.div`
     &:hover {
       color: #fff;
     }
+  }
+
+  @media (max-width: 500px) {
+    display: none;
   }
 `;
 
@@ -171,6 +185,10 @@ export const NavBottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 430px) {
+    display: none;
+  }
 `;
 
 export const TabStrip = styled.div`
@@ -234,6 +252,10 @@ export const Dropdown = styled.span`
 export const NavBottomActions = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ShareButton = styled.button`

@@ -17,6 +17,9 @@ export const Container = styled.div<Props>`
     border-left: 1px solid rgba(0, 0, 0, 0.05);
   }
 
+  overflow-y: auto;
+  overflow-x: hidden;
+
   header {
     display: flex;
     justify-content: space-between;
@@ -62,6 +65,13 @@ export const Container = styled.div<Props>`
 
   ul {
     margin-top: 30px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  @media (min-width: 350px) {
+    flex: 0 0 300px;
   }
 `;
 

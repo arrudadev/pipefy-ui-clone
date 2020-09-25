@@ -6,6 +6,7 @@ export const Container = styled.main`
   flex: 1 1 auto;
 
   width: calc(100vw - 56px);
+  height: 100%;
 
   transition: all 0.3s ease-in-out, margin 0ms linear;
 `;
